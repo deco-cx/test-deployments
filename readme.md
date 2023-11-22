@@ -25,7 +25,7 @@ Parameters:
 ## Test Data
 
 Download data from some sites
-
+`/data?address1=https%3A%2F%2Ffastly.decocache.com%2Fhttps%3A%2F%2Ftest.example.com
 Parameters:
 - address1: URI encoded to download 
 - address2: URI encoded to download
