@@ -1,0 +1,23 @@
+{
+    "lock": false,
+    "tasks": {
+      "start": "deno run -A --unstable --watch=main.ts main.ts"
+    },
+    "exclude": ["static/", "README.md"],
+    "lint": {
+      "rules": {
+        "exclude": ["no-explicit-any", "no-extra-boolean-cast"]
+      }
+    },
+    "imports": {
+        "preact": "https://esm.sh/preact@10.15.1",
+        "preact/": "https://esm.sh/preact@10.15.1/",
+        "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.0"
+      },    
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "jsxImportSource": "preact",
+      "lib": ["deno.unstable"]
+    }
+  }
+  
