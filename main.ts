@@ -20,8 +20,12 @@ const handleCpu = (request: Request) => {
   const queryParams = new URL(request.url).searchParams;
   const N = parseInt(queryParams.get("N") || "5", 10);
   const C = parseInt(queryParams.get("C") || "5", 10);
-
-  return { status: "ok", body:  renderExample(N, C) };
+  const O = parseInt(queryParams.get("O") || "1", 10);
+  if (O) {
+    return { status: "ok", body:  renderExample(N, C) };
+  }
+  renderExample(N, C);
+  return { status: "ok" };
 };
 
 const handleData = async (request: Request) => {
